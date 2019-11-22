@@ -1,0 +1,5 @@
+<div class="main">
+  <div class="item-tag" *ngFor="let tag of tags$ | async; let i = index">
+    <button mat-raised-button #tagEvent (click)="onSelectTag(tagEvent, tag)"> {{tag}}</button>
+  </div>
+</div>

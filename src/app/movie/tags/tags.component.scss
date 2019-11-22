@@ -1,0 +1,10 @@
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  .item-tag{
+    margin: 9px;
+  }
+  .active{
+    color: #9E9E9E;
+  }
+}

@@ -1,0 +1,22 @@
+<app-search></app-search>
+<app-tags></app-tags>
+
+<mat-list>
+  <mat-list-item class="item" *ngFor="let movie of moviesObservable$ | async">
+    <p >{{movie.title}}</p>
+    <button mat-icon-button
+            (click)="onHandleBookmark(movie)"
+            [matTooltip]="movie.tooltip">
+      <mat-icon>{{movie.icon}}</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
+
+
+<div *ngIf="showButton$ | async"
+     class="action">
+  <button mat-raised-button
+          color="primary"
+          (click)="onNextPage()">Показать еще
+  </button>
+</div>

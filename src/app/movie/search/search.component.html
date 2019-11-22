@@ -1,0 +1,8 @@
+<mat-form-field class="search">
+  <mat-icon matSuffix>search</mat-icon>
+  <input #searchBox
+         type="search"
+         matInput
+         placeholder="Поиск"
+         (input)="search(searchBox.value)">
+</mat-form-field>

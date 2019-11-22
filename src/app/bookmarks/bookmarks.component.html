@@ -1,0 +1,13 @@
+
+<mat-list>
+  <mat-list-item class="item"
+                 *ngFor="let bookmark of bookmarksObservable$ | async">
+    <p >{{bookmark}}</p>
+    <button mat-icon-button
+            (click)="onDeleteBookmark(bookmark)"
+            [matTooltip]="'Удалить из закладки'">
+      <mat-icon>star</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
+
